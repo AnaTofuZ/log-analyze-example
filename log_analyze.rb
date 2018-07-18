@@ -7,7 +7,7 @@ count = Hash.new(0)
 
 File.open(file,'r') do |f|
     f.each_line do |line|
-        if line =~ /\w \d{0,2} (?:\d{2}:?){3} #{user_name} ([\w.]+)\[\d+\]/
+        if line =~ /\w+ \d{0,2} (?:\d{2}:?){3} #{user_name} ([\w.]+)\[\d+\]/
             count[$1] += 1
         end
     end
